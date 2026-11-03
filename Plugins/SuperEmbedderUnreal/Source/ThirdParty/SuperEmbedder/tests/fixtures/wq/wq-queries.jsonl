@@ -1,0 +1,5 @@
+{"id": "wq-00", "text": "temperature"}
+{"id": "wq-01", "text": "  leading and trailing whitespace query  "}
+{"id": "wq-02", "text": "MixedCASE Query With Numbers 42"}
+{"id": "wq-03", "text": "unicode café façade 日本語 query"}
+{"id": "wq-04", "text": "<|endoftext|> embedded literal in the middle of a query"}

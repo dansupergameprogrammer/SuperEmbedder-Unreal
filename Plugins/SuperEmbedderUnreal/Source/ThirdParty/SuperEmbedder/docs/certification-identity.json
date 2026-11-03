@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "product": "superembedder",
+  "line": 1,
+  "enginePin": {
+    "tag": "v1.18.1",
+    "commit": "c3c14b16690a0c0c54de781f6f30380d88e62bd1",
+    "engine_tree_sha": "0d385b026d36558a454b1970c9c840bc6b58c530b39a1f0f87d63bbd1c5c5a64"
+  },
+  "proofCorpus": {
+    "path": "tests/fixtures/c12b/corpus-239.jsonl",
+    "sha256": "275b0749a25cfd141e747111d4cbed66d7772ce58a50b5c13a394c5c0da222c0",
+    "rows": 239,
+    "corpusDigest": "5e3a27bdf49ea6ebd905923cb2359bd9eb7825b9ab7bf4e93ecbed423f54bff7",
+    "tokenIdDigest": "e440e227fb5bdd3cc58895ac4fa536e533c8e5988fc993c4f3286e36680de835"
+  }
+}

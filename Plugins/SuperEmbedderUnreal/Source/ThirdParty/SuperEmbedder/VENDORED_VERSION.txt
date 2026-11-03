@@ -1,0 +1,30 @@
+SuperEmbedder -- vendored library source compiled into SuperEmbedderCore
+
+Tag:    v1.0.0
+Commit: d326b4214feaec39b756278a684620cb6c6bc34f
+Release status: published release v1.0.0 (2026-11-02)
+Engine pin (superslm.lock): SuperSLM v1.18.1, commit c3c14b16690a0c0c54de781f6f30380d88e62bd1
+Source repository: the upstream SuperEmbedder repository (not this repository)
+
+What is vendored: a library subset of the commit, not the whole distribution. This plugin runs no CMake:
+include/, src/, cmake/ (read for reference; the generator reproduces its configure outputs),
+CMakeLists.txt (the SEMB_LIBRARY_SOURCES list the wrapper check reads), superslm.lock, the two documents
+the library compiles in (docs/certified-builds.json, docs/certification-identity.json; the identity's
+bytes feed certification_epoch and so the encoder fingerprint), the W-Q fixtures the library compiles in
+(tests/fixtures/wq/: wq-queries.jsonl, wq-truncation-leg.jsonl and their manifest), .gitattributes,
+CHANGELOG.md, LICENSE, NOTICE, README.md. tests/ (otherwise), tools/, epoch-store/ and docs/ (otherwise)
+are not vendored.
+
+Compiled: the 14 SEMB_LIBRARY_SOURCES, the GPU-off adapter (src/superembedder/engine_adapter_gpu_off.cpp;
+plugin 1.0 has no GPU path), and src/superembedder/engine_identity/build_identity.cpp, the engine identity
+verb, which SuperEmbedder's pin tool normally appends to the engine library. Here the module compiles it
+itself, under the rename, with the build record ci/generate_semb_config.py writes. The configure-time
+headers CMake would generate are written by that generator into
+Source/SuperEmbedderCore/Private/Generated/.
+
+Every file is byte-identical to `git cat-file blob` of the commit's own blob. The repository's own
+.gitattributes (`* -text`) is vendored with it, so the bytes are identical on every checkout.
+VENDORED_MANIFEST.sha256 records each file's SHA-256 and is checked by
+ci/check_vendored_tree_matches_manifest.py.
+
+Do not hand-edit files under this directory.

@@ -1,0 +1,22 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "5.8",
+	"Category": "",
+	"Description": "Minimal host project for the SuperEmbedder-Unreal plugin: encode text, bake a tiny vector set, run a top-k query.",
+	"Modules": [
+		{
+			"Name": "ExampleProject",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "SuperEmbedderUnreal",
+			"Enabled": true
+		}
+	],
+	"AdditionalPluginDirectories": [
+		"../Plugins"
+	]
+}

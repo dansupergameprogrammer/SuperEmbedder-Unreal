@@ -1,0 +1,29 @@
+SuperEmbedder-Unreal
+Copyright 2026 Dan Super (RageQuitDan)
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This product includes SuperEmbedder (https://github.com/dansupergameprogrammer/SuperEmbedder),
+Copyright 2026 Dan Super, licensed under the Apache License, Version 2.0. Its source is vendored,
+unmodified, under Plugins/SuperEmbedderUnreal/Source/ThirdParty/SuperEmbedder/, together with its
+own LICENSE and NOTICE files.
+
+It also includes the SuperSLM engine (https://github.com/dansupergameprogrammer/SuperSLM),
+Copyright 2026 Dan Super, licensed under the Apache License, Version 2.0, at the release
+SuperEmbedder pins. Its source is vendored, unmodified, under
+Plugins/SuperEmbedderUnreal/Source/ThirdParty/SuperSLM/, together with its own LICENSE and NOTICE
+files. The plugin compiles that engine under a generated rename header, so its link names differ
+from those of the SuperSLM-Unreal plugin's copy; no vendored file is edited.
+
+-------------------------------------------------------------------------------
+
+The model files the plugin is used with are not part of this source tree. They are distributed by
+the SuperEmbedder release as qwen3-embedding-0.6b-1p5.sslm (model) and
+qwen3-embedding-0.6b-tokenizer.sslm (tokenizer), a converted form of the following model:
+
+Qwen3-Embedding-0.6B, by the Qwen team (Alibaba Cloud)
+Source: https://huggingface.co/Qwen/Qwen3-Embedding-0.6B
+Revision: 97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3
+Licensed under the Apache License, Version 2.0.
+
+The conversion and its notice are SuperEmbedder's; see that repository's NOTICE.

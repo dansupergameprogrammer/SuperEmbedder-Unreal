@@ -1,0 +1,23 @@
+{
+  "schema": "semb_wq_query_manifest_v1",
+  "minted": "2026-09-08",
+  "minted_by": "Claude/Curie/te194-slice5-red-2026-09-08.md (this round, TE-194)",
+  "selection_rule": "W-Q's own committed query set (SuperEmbedder_Plan.md sec 4.4b/4.4c: 'drawn from neither the evaluation corpora nor W-B's own documents', 'like W-A, W-Q drives the entry point's edge cases, not its plausible cases'). Two files, two constructions: wq-queries.jsonl is the JOIN LEG, five short strings authored to stress semb_query_encode's own prefix/text join -- a bare single word (no join-adjacent punctuation at all), leading/trailing whitespace (the join separator's own edge), mixed case with digits (a normalisation edge distinct from case-folding), non-ASCII/CJK text crossing UTF-8 multi-byte boundaries (a truncation/byte-counting edge distinct from the truncation-order leg below), and a query whose own text contains the literal special-token string '<|endoftext|>' (stresses whether special-token handling is byte-content-aware or structural). wq-truncation-leg.jsonl is the TRUNCATION-ORDER LEG, one string of 400 distinct numbered tokens (guaranteed distinct from any plausible witness-internal cap the builder's round selects, per SuperEmbedder_Plan.md sec 4.4c: 'a witness-internal cap set below that string's own token count') so composing-then-cutting and cutting-then-composing are forced to disagree by construction whatever cap value is chosen. Neither file's content overlaps tests/fixtures/wb/wb-corpus.jsonl (the shopkeeper-vendor register) or tests/fixtures/c12b/ (the 239-document evaluation corpus) -- confirmed by inspection, distinct register and distinct authored content, D-SLM4090's population-separation principle applied to the query side.",
+  "authorship": "Authored this round (TE-194), not drawn from any existing corpus.",
+  "truncation_content_cap": 96,
+  "files": {
+    "wq-queries.jsonl": {
+      "sha256": "3b1d996d17416281c3f1bfb6b5f471fca48718541d974cf442043cb9499fbcca",
+      "bytes": 315,
+      "lines": 5,
+      "purpose": "join leg -- SuperEmbedder_Plan.md sec 4.4c construction 1: 'digests the emitted position for each string under whatever composition the build performs. Catches every composition difference that lives at the prefix/text join: omission, doubling, append-vs-prepend, a join separator, dropped special tokens, caller-text normalisation.'"
+    },
+    "wq-truncation-leg.jsonl": {
+      "sha256": "9ea0b2328b83b9a91b1568814b1ee0f6432b95117731a946aad4c954988f379c",
+      "bytes": 4200,
+      "lines": 1,
+      "purpose": "truncation-order leg -- SuperEmbedder_Plan.md sec 4.4c construction 2: 'one dedicated longer committed string, at a witness-internal cap set below that string's own token count and independent of any caller-supplied --max-query-tokens... composing-then-cutting and cutting-then-composing are forced to disagree by construction.'"
+    }
+  },
+  "id_scheme": "wq-00 through wq-04 for the join leg (decimal, two digits, zero-padded, in this file's own array order); wq-trunc-00 for the single truncation-leg string."
+}

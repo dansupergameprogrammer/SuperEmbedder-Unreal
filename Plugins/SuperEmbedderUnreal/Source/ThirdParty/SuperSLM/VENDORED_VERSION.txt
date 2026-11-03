@@ -1,0 +1,28 @@
+SuperSLM -- vendored engine source for SuperEmbedderCore's own renamed engine copy
+
+Tag:    v1.18.1
+Commit: c3c14b16690a0c0c54de781f6f30380d88e62bd1
+Release status: published release v1.18.1
+Pinned by: the vendored SuperEmbedder's superslm.lock (tag=v1.18.1, commit=c3c14b16...,
+           tree=0d385b026d36558a454b1970c9c840bc6b58c530b39a1f0f87d63bbd1c5c5a64)
+Source repository: the upstream SuperSLM repository (not this repository)
+
+This is the engine release SuperEmbedder pins, not the SuperSLM plugin's release. The SuperSLM plugin
+(SuperSLM-Unreal) vendors its own engine (SuperSLM-Unreal 1.4.0 vendors v1.18.1, the same release); the
+two copies coexist in one link only because SuperEmbedderCore compiles this one under the generated rename
+header (Source/SuperEmbedderCore/Private/Generated/SuperEmbedderCoreRename.*.h). See docs/COEXISTENCE.md
+at the repository root.
+
+What is vendored: a library subset of the tag, not the whole distribution. This plugin runs no CMake, so
+only what the module compiles or reads is kept: include/, src/ (GPU sources included but NOT compiled;
+plugin 1.0 compiles the 21 SUPERSLM_CORE_SOURCES only), CMakeLists.txt (the source list the wrapper
+check reads), .gitattributes, CHANGELOG.md, LICENSE, NOTICE, README.md. tests/, tools/, docs/, cmake/
+and the build scripts are not vendored.
+
+Every file is byte-identical to `git cat-file blob` of the tag's own blob (raw, no checkout filters
+applied). VENDORED_MANIFEST.sha256 records each file's SHA-256 and is checked by
+ci/check_vendored_tree_matches_manifest.py. ci/revendor.py writes this tree, its manifest and the
+wrappers from a SuperSLM revision and the SuperEmbedder revision that pins it.
+
+Do not hand-edit files under this directory. A correction to the engine is made upstream, SuperEmbedder
+re-pins, and this tree is re-vendored at the new pin (ci/revendor.py), together with the rename header.

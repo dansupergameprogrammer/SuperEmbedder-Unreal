@@ -1,0 +1,20 @@
+# Unreal generated
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+.vs/
+.idea/
+*.sln
+*.code-workspace
+
+# Python bytecode and test caches from the ci/ checks
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# The model and tokenizer (about 638 MB) are SuperEmbedder release assets, never in the tree. The example
+# reads them from ExampleProject/Content/SuperEmbedder/, staged as a non-asset directory. The small .sslm
+# test fixtures under Plugins/ are committed.
+ExampleProject/Content/SuperEmbedder/
+ExampleProject/**/*.sslm

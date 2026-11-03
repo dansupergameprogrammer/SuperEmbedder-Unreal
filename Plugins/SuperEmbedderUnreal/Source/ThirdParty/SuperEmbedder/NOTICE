@@ -1,0 +1,23 @@
+SuperEmbedder
+Copyright 2026 Dan Super
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+-------------------------------------------------------------------------------
+
+The SuperEmbedder release distributes a converted form of the following model,
+as the release downloads qwen3-embedding-0.6b-1p5.sslm (model) and
+qwen3-embedding-0.6b-tokenizer.sslm (tokenizer). The source code in this repository does
+not contain the model's weights.
+
+Qwen3-Embedding-0.6B
+Source: https://huggingface.co/Qwen/Qwen3-Embedding-0.6B
+Revision: 97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3
+Licensed under the Apache License, Version 2.0.
+You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Modifications: the model's weights were converted to the SuperSLM integer
+format by SuperSLM's offline converter, and its tokenizer to SuperSLM's
+tokenizer format. The conversion changes the numeric representation of the
+weights; it adds no weights and no training.

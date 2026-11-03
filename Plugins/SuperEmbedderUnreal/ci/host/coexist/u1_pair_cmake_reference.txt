@@ -1,0 +1,12 @@
+# The semb.h smoke's output from SuperEmbedder's own CMake build (v1.0.0 d326b42, engine v1.18.1 via its pin tool, GCC 13.3.0, Release)
+# on the U1 synthetic pair below. run.sh compares the plugin build's digests with these when the pair's hashes match.
+pair u1_pair_model.sslm ab75b3d6359d2afaf2fc58882b07c050d3b96d6f34c593a69c359ab0d9a5e399
+pair u1_pair_tokenizer.sslm 2c3220900f2b69219f335ee564184c6786440b80a5842e7e7a2654732ec64c75
+dims 32
+digest document 0 d5957362ab6bac25c0e25a01010bbc0de796cbad90328a0338d568b4dfce7d0e
+fingerprint 975538fb04531fa8f7a8d20bd78e41de73c2152dd356fe6e577089cf4479dae2
+digest document 1 5294ffcb8ff87e8b0ec70103e325ed4f8a82a365625e0b7ae4cef012ee2dff5b
+digest document 2 1b27fca6f9c4817c37db0c57a01707fc7a47a7b9f69e9f1bcc0b885566689a82
+digest query 0 3583bd6118fa1232ea249e6515b4bf15e034ed0ff6dca1d4ca36e226a9021417
+digest query 1 3583bd6118fa1232ea249e6515b4bf15e034ed0ff6dca1d4ca36e226a9021417
+digest query 2 3583bd6118fa1232ea249e6515b4bf15e034ed0ff6dca1d4ca36e226a9021417

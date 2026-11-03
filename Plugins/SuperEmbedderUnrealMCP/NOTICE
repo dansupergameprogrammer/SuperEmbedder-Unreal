@@ -1,0 +1,9 @@
+SuperEmbedder-Unreal: the SuperEmbedderUnrealMCP plugin (optional MCP toolset)
+Copyright 2026 Dan Super (RageQuitDan)
+
+Licensed under the Apache License, Version 2.0 (see LICENSE in this folder).
+
+This plugin depends on the SuperEmbedderUnreal plugin, which includes SuperEmbedder
+(https://github.com/dansupergameprogrammer/SuperEmbedder) and the SuperSLM engine
+(https://github.com/dansupergameprogrammer/SuperSLM), Copyright 2026 Dan Super, both licensed
+under the Apache License, Version 2.0. This plugin contains no engine code.

@@ -1,0 +1,36 @@
+{
+	"FileVersion": 3,
+	"Version": 3,
+	"VersionName": "1.0.0",
+	"FriendlyName": "SuperEmbedder MCP Toolset",
+	"Description": "MCP tools over SuperEmbedder: the encoder's status, encode a text (a digest and a summary, never the whole vector), top-k against a named vector set, list the vector sets, and validate them. Builds against the engine's Experimental ToolsetRegistry plugin; an MCP client reaches the tools through the engine's Experimental ModelContextProtocol plugin, enabled in your project (in practice, both need a GitHub-source engine build).",
+	"Category": "AI",
+	"CreatedBy": "RageQuitDan",
+	"CreatedByURL": "",
+	"DocsURL": "https://github.com/dansupergameprogrammer/SuperEmbedder-Unreal",
+	"MarketplaceURL": "",
+	"SupportURL": "https://github.com/dansupergameprogrammer/SuperEmbedder-Unreal/issues",
+	"CanContainContent": false,
+	"IsBetaVersion": true,
+	"IsExperimentalVersion": true,
+	"Installed": false,
+	"EnabledByDefault": false,
+	"Modules": [
+		{
+			"Name": "SuperEmbedderUnrealMCP",
+			"Type": "Editor",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [ "Win64" ]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "ToolsetRegistry",
+			"Enabled": true
+		},
+		{
+			"Name": "SuperEmbedderUnreal",
+			"Enabled": true
+		}
+	]
+}

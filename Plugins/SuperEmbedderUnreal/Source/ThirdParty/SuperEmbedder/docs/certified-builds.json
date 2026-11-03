@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "release": "1.0.0",
+  "builds": [
+    {
+      "id": "msvc19.33-auto@avx2",
+      "os": "windows",
+      "isa": "x86-64",
+      "objectFormat": "COFF",
+      "toolchain": "MSVC 193331631.0",
+      "stdlib": "MSVC STL 202205L",
+      "configuration": "Release",
+      "buildSystem": "cmake",
+      "dispatch": "auto",
+      "compileFlags": "205f4e0199088defb1cf1580a8916464db86477664998b078136fc366104c29b",
+      "engineFlags": "751427436f68e8ef11d5d2286f6ed1aaa27e6100891ff671013af148e6f09ecf",
+      "cpuTier": "avx2",
+      "artifact": "qwen3-embedding-0.6b-1p5.sslm sha256=0be28bf42637264df85481eb925c46f674da7db97fd7601c6732881ad8f99fbf; tokenizer qwen3-embedding-0.6b-tokenizer.sslm sha256=2ba15e621e28f4f58046a89a4e4b1e3e6ea8c4e1a4f5397238634b589082b9d3",
+      "host": "AMD Ryzen 9 5950X 16-Core Processor",
+      "evidence": "docs/certification/1.0.0"
+    },
+    {
+      "id": "clangcl18.1.8-auto@avx2",
+      "os": "windows",
+      "isa": "x86-64",
+      "objectFormat": "COFF",
+      "toolchain": "Clang 18.1.8 (MSVC frontend 193331631)",
+      "stdlib": "MSVC STL 202205L",
+      "configuration": "Release",
+      "buildSystem": "cmake",
+      "dispatch": "auto",
+      "compileFlags": "4444e0b0a27a41f52fcc7ed63ec71fa6fc36a366bd946be25bb4abfac168816d",
+      "engineFlags": "31afddd0d48dda54b3b4b6b8a4c7729e81af25c02821e4e8ca565dc4325f3652",
+      "cpuTier": "avx2",
+      "artifact": "qwen3-embedding-0.6b-1p5.sslm sha256=0be28bf42637264df85481eb925c46f674da7db97fd7601c6732881ad8f99fbf; tokenizer qwen3-embedding-0.6b-tokenizer.sslm sha256=2ba15e621e28f4f58046a89a4e4b1e3e6ea8c4e1a4f5397238634b589082b9d3",
+      "host": "AMD Ryzen 9 5950X 16-Core Processor",
+      "evidence": "docs/certification/1.0.0"
+    }
+  ],
+  "pairwiseProofs": [
+    {
+      "a": "msvc19.33-auto@avx2",
+      "b": "clangcl18.1.8-auto@avx2",
+      "runIds": [
+        "msvc19.33-auto-avx2-provisional-20261102T093926",
+        "clangcl18.1.8-auto-avx2-provisional-20261102T095002"
+      ],
+      "rowDigest": "e8ad5d05c31eced1afa8967f0babc72212718effea9e19b0c46d2282e9bcde72",
+      "tokenIdDigest": "e440e227fb5bdd3cc58895ac4fa536e533c8e5988fc993c4f3286e36680de835"
+    }
+  ],
+  "gpuVerifications": [
+    {
+      "vendorId": "0x1002",
+      "deviceId": "0x744c",
+      "adapterName": "AMD Radeon RX 7900 XT",
+      "driverVersion": "32.0.21030.2001",
+      "cell": "msvc19.33-auto@avx2",
+      "runIds": [
+        "gpu-proof-corpus-avx2-provisional-20261102T095041"
+      ]
+    }
+  ]
+}

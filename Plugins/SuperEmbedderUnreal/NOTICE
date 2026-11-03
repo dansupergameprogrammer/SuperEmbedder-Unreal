@@ -1,0 +1,14 @@
+SuperEmbedder-Unreal: the SuperEmbedderUnreal plugin
+Copyright 2026 Dan Super (RageQuitDan)
+
+Licensed under the Apache License, Version 2.0 (see LICENSE in this folder).
+
+This plugin includes SuperEmbedder (https://github.com/dansupergameprogrammer/SuperEmbedder),
+Copyright 2026 Dan Super, licensed under the Apache License, Version 2.0, vendored unmodified
+under Source/ThirdParty/SuperEmbedder/ with its own LICENSE and NOTICE files.
+
+It also includes the SuperSLM engine (https://github.com/dansupergameprogrammer/SuperSLM),
+Copyright 2026 Dan Super, licensed under the Apache License, Version 2.0, at the release
+SuperEmbedder pins, vendored unmodified under Source/ThirdParty/SuperSLM/ with its own LICENSE
+and NOTICE files. This plugin compiles that engine under a generated rename header, so its
+link names differ from the SuperSLM plugin's copy; no vendored file is edited.

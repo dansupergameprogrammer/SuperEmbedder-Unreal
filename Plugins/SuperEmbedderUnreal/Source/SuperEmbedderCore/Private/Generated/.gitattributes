@@ -1,0 +1,2 @@
+# Generated headers: exact bytes on every checkout (ci/generate_semb_config.py --check compares bytes).
+* -text

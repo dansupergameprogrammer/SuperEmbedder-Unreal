@@ -1,0 +1,9 @@
+# Every digested source byte is checkout-invariant (Claude/Plans/
+# SuperEmbedder_Plan.md §1.3): a provenance or fingerprint digest that varies
+# by checkout is useless for the bisect it serves, and SEMB_ENGINE_INSTALL_
+# DIVERGED / SEMB_SOURCE_SET_DRIFT would fire spuriously across a
+# translating checkout. Applied to every file in this repository — a superset
+# of "every file the library target compiles or includes" (§4.1/§8 C33's own
+# scope) rather than a curated list that could drift out of sync with what
+# the target actually compiles as sources are added.
+* -text

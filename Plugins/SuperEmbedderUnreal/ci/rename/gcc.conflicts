@@ -1,0 +1,10 @@
+cfg	used by the public header semb.h
+device	used by the public header semb.h
+digest	used by the public header semb.h
+n	used by the public header semb.h
+noinline	an attribute word
+q	used by the public header semb.h
+retain	an attribute word
+struct_size	used by the public header semb.h
+used	an attribute word
+utf8	used by the public header semb.h

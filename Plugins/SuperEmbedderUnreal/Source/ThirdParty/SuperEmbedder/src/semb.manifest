@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- The semb CLI runs with UTF-8 as its process code page (Windows 10 1903 and later), so a query
+     given on the command line reaches the encoder as UTF-8 rather than in the ANSI code page, which
+     the encoder refuses as SEMB_INVALID_UTF8, and a path argument is read with the same encoding.
+     Older Windows ignores the setting; the stdin mode reads bytes on every version.
+     XML forbids a double hyphen inside a comment, so no option names appear here. -->
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+  <application xmlns="urn:schemas-microsoft-com:asm.v3">
+    <windowsSettings>
+      <activeCodePage xmlns="http://schemas.microsoft.com/SMI/2019/WindowsSettings">UTF-8</activeCodePage>
+    </windowsSettings>
+  </application>
+</assembly>
