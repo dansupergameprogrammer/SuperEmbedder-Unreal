@@ -2,6 +2,6 @@
 // re-run the generator (ci/host runs it with --check).
 #pragma once
 
-#define SEMB_WITNESS_BUILD_GENERATION_TOKEN "1968480a894d3d14b968aa625a0d5722"
+#define SEMB_WITNESS_BUILD_GENERATION_TOKEN "bacf83abb32fe7b02ae322272ab67ed1"
 static_assert(sizeof(SEMB_WITNESS_BUILD_GENERATION_TOKEN) == 33,
               "SEMB_WITNESS_BUILD_GENERATION_TOKEN must be a 32-hex-character string literal");

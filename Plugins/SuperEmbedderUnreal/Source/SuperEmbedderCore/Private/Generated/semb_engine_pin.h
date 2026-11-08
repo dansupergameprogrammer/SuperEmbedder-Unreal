@@ -13,4 +13,4 @@
 #define SEMB_ENGINE_STDLIB "unrecorded"
 #define SEMB_ENGINE_DISPATCH "auto"
 #define SEMB_ENGINE_FLAGS_SHA "unrecorded"
-#define SEMB_ENGINE_BUILD_RECORD "ubt-own-copy;engine=v1.18.1;engine_commit=c3c14b16690a0c0c54de781f6f30380d88e62bd1;plugin=1.0.0"
+#define SEMB_ENGINE_BUILD_RECORD "ubt-own-copy;engine=v1.18.1;engine_commit=c3c14b16690a0c0c54de781f6f30380d88e62bd1;plugin=1.0.1"

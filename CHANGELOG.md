@@ -4,6 +4,24 @@ All notable changes to SuperEmbedder-Unreal are recorded here. Versions follow t
 `Plugins/SuperEmbedderUnreal/SuperEmbedderUnreal.uplugin`. The plugin versions independently of SuperEmbedder;
 each entry names the SuperEmbedder and SuperSLM releases it vendors.
 
+## 1.0.1 - 2026-11-07
+
+**Vendored:** SuperEmbedder `v1.0.0` and SuperSLM `v1.18.1`, unchanged. Vector sets baked with 1.0.0 stay valid.
+
+### Changed
+
+- **About 2x faster on Windows machines with AVX-512.** The plugin now builds the vendored engine with
+  `SUPERSLM_TILED_AVX512_MSVC=1` and `SUPERSLM_SITES_AVX512_MSVC=1`, the fast AVX-512 kernels that SuperSLM 1.19.1
+  turns on by default. On an Intel i7-1165G7 laptop (development `-game` build, 127 queries), a query went from about
+  1,270 ms to about 530 ms and the encoder opened in 11-13 s instead of 22-34 s, with identical query digests. CPUs
+  without AVX-512 run the same code as before.
+
+### Fixed
+
+- **The plugin builds with shared precompiled headers off.** A project that sets `bUseSharedPCHs = false` failed to
+  compile two of the plugin's files, which leaned on the shared precompiled header for `UPackage` and `FAssetData`.
+  Each now includes the engine header that declares what it uses. No behavior changes.
+
 ## 1.0.0 - 2026-11-03
 
 The first public release.

@@ -12,6 +12,7 @@
 #include "SuperEmbedderVectorSetCore.h"
 
 #include <unordered_set>
+#include "UObject/Package.h"
 
 namespace
 {

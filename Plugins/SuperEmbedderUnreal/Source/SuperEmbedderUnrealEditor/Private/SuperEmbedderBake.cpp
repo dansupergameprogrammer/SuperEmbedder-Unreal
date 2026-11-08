@@ -15,6 +15,7 @@
 #include "SuperEmbedderBlueprintLibrary.h"
 #include "SuperEmbedderSubsystem.h"
 #include "SuperEmbedderVectorSet.h"
+#include "AssetRegistry/AssetData.h"
 
 #define LOCTEXT_NAMESPACE "SuperEmbedderBake"
 

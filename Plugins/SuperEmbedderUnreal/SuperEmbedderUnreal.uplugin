@@ -1,7 +1,7 @@
 {
 	"FileVersion": 3,
-	"Version": 3,
-	"VersionName": "1.0.0",
+	"Version": 4,
+	"VersionName": "1.0.1",
 	"FriendlyName": "SuperEmbedder For Unreal Engine",
 	"Description": "Unreal Engine 5.8 integration of SuperEmbedder: text to embedding vectors on the CPU, off the game thread, with vector sets and exact cosine top-k, an exact encode cache, async Blueprint nodes, and an editor bake (DataTable or JSONL) and validate. Compiled from the vendored SuperEmbedder release and its own renamed copy of the SuperSLM engine, so it can be enabled beside the SuperSLM plugin. Built on the Apache-2.0-licensed SuperEmbedder library.",
 	"Category": "AI",

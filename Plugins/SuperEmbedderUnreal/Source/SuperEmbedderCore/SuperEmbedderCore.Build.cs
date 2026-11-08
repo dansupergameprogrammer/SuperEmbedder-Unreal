@@ -51,6 +51,10 @@ public class SuperEmbedderCore : ModuleRules
 		// opens uncertified, as the proposal states (certification lands in 1.1).
 		PrivateDefinitions.Add("SEMB_BUILD_CONFIGURATION=\"ubt-" + Target.Configuration + "\"");
 		PrivateDefinitions.Add("SEMB_BUILD_SYSTEM=\"ubt\"");
+		// The vendored engine's fast AVX-512 kernels on MSVC (SuperSLM's default from its next release; executed and
+		// digest-matched under MSVC 19.44 on an i7-1165G7, 2026-11-05). Set either to 0 to fall back to the old code.
+		PrivateDefinitions.Add("SUPERSLM_TILED_AVX512_MSVC=1");
+		PrivateDefinitions.Add("SUPERSLM_SITES_AVX512_MSVC=1");
 
 		// The rename header. The list depends on which words the toolchain's standard library and SDK use,
 		// so the header is derived per preprocessor (ci/generate_rename_header.py) and the MSVC one is
